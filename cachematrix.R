@@ -3,8 +3,8 @@
 ## its inverse in memory. 
 
 makeCacheMatrix <- function(x = matrix()) {
-        
-        inv <<- NULL
+
+	inv <<- NULL
 
 	set <- function(y){
 		x <<- y
@@ -29,7 +29,7 @@ cacheSolve <- function(x, ...) {
         
         ## Return a matrix that is the inverse of 'x'
         
-        inv <- x$getInverse()
+	inv <- x$getInverse()
 	if(!is.null(inv)) {
 		message("getting cached data")
 		return(inv)
@@ -38,5 +38,4 @@ cacheSolve <- function(x, ...) {
 	inv <- solve(matrix)
 	x$setInverse(inv)
 	inv
-        
 }
